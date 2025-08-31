@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on io</title>
+    <link>https://prkyo.github.io/page/posts/</link>
+    <description>Recent content in Posts on io</description>
+    <image>
+      <title>io</title>
+      <url>https://prkyo.github.io/page/images/papermod-cover.png</url>
+      <link>https://prkyo.github.io/page/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.146.5</generator>
+    <language>en</language>
+    <copyright>io</copyright>
+    <lastBuildDate>Sun, 31 Aug 2025 17:34:00 +0800</lastBuildDate>
+    <atom:link href="https://prkyo.github.io/page/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pandas</title>
+      <link>https://prkyo.github.io/page/posts/pandas/</link>
+      <pubDate>Sun, 31 Aug 2025 17:34:00 +0800</pubDate>
+      <guid>https://prkyo.github.io/page/posts/pandas/</guid>
+      <description>&lt;p&gt;Example&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the CSV file
+df = pd.read_csv(&amp;#39;charge_log.csv&amp;#39;)
+
+# Inspect the data
+print(df.head())
+print(df.info())
+
+# Convert &amp;#39;time&amp;#39; column from HH:MM:SS format to seconds
+def time_to_seconds(time_str):
+    h, m, s = map(int, time_str.split(&amp;#39;:&amp;#39;))
+    return h * 3600 + m * 60 + s
+
+df[&amp;#39;time_in_seconds&amp;#39;] = df[&amp;#39;time&amp;#39;].apply(time_to_seconds)
+
+# Create the plot
+plt.figure(figsize=(12, 8))
+
+# Get unique current types
+cur_types = df[&amp;#39;cur_type&amp;#39;].unique()
+
+# Plot a line for each current type
+for cur_type in cur_types:
+    df_cur_type = df[df[&amp;#39;cur_type&amp;#39;] == cur_type]
+    plt.plot(df_cur_type[&amp;#39;time_in_seconds&amp;#39;], df_cur_type[&amp;#39;current&amp;#39;], label=cur_type)
+
+# Set labels and title
+plt.xlabel(&amp;#39;时间 (s)&amp;#39;)
+plt.ylabel(&amp;#39;电流&amp;#39;)
+plt.title(&amp;#39;充电参数表&amp;#39;)
+plt.legend(title=&amp;#39;电流类型&amp;#39;)
+plt.grid(True)
+plt.tight_layout()
+
+# Save the plot
+plt.savefig(&amp;#39;charge_log_plot.png&amp;#39;)
+
+print(&amp;#34;Plot saved as charge_log_plot.png&amp;#34;)
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://prkyo.github.io/page/posts/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://prkyo.github.io/page/posts/markdown-syntax/</guid>
+      <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+    </item>
+    <item>
+      <title>Code Syntax Guide</title>
+      <link>https://prkyo.github.io/page/posts/code_syntax/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://prkyo.github.io/page/posts/code_syntax/</guid>
+      <description>Sample article showcasing basic code syntax and formatting for HTML elements.</description>
+    </item>
+    <item>
+      <title>Rich Content and Shortcodes</title>
+      <link>https://prkyo.github.io/page/posts/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://prkyo.github.io/page/posts/rich-content/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+    </item>
+    <item>
+      <title>Math Typesetting</title>
+      <link>https://prkyo.github.io/page/posts/math-typesetting/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://prkyo.github.io/page/posts/math-typesetting/</guid>
+      <description>A brief guide to setup KaTeX</description>
+    </item>
+    <item>
+      <title>Emoji Support</title>
+      <link>https://prkyo.github.io/page/posts/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://prkyo.github.io/page/posts/emoji-support/</guid>
+      <description>Guide to emoji usage in Hugo</description>
+    </item>
+  </channel>
+</rss>
