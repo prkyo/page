@@ -2,88 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://prkyo.github.io/page/fa/posts/markdown-syntax/</loc>
+    <loc>http://localhost:1313/page/fa/posts/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://prkyo.github.io/page/posts/markdown-syntax/"
+                href="http://localhost:1313/page/posts/markdown-syntax/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://prkyo.github.io/page/fr/posts/markdown-syntax/"
+                href="http://localhost:1313/page/fr/posts/markdown-syntax/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://prkyo.github.io/page/fa/posts/markdown-syntax/"
+                href="http://localhost:1313/page/fa/posts/markdown-syntax/"
                 />
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/facategories/</loc>
+    <loc>http://localhost:1313/page/fa/facategories/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/facategories/syntax/</loc>
+    <loc>http://localhost:1313/page/fa/facategories/syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/facategories/themes/</loc>
+    <loc>http://localhost:1313/page/fa/facategories/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/faseries/</loc>
+    <loc>http://localhost:1313/page/fa/faseries/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/faseries/themes-guide/</loc>
+    <loc>http://localhost:1313/page/fa/faseries/themes-guide/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/fatags/</loc>
+    <loc>http://localhost:1313/page/fa/fatags/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/fatags/css/</loc>
+    <loc>http://localhost:1313/page/fa/fatags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/fatags/html/</loc>
+    <loc>http://localhost:1313/page/fa/fatags/html/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/fatags/markdown/</loc>
+    <loc>http://localhost:1313/page/fa/fatags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/fatags/themes/</loc>
+    <loc>http://localhost:1313/page/fa/fatags/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/</loc>
+    <loc>http://localhost:1313/page/fa/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://prkyo.github.io/page/"
+                href="http://localhost:1313/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://prkyo.github.io/page/fr/"
+                href="http://localhost:1313/page/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://prkyo.github.io/page/fa/"
+                href="http://localhost:1313/page/fa/"
                 />
   </url><url>
-    <loc>https://prkyo.github.io/page/fa/posts/</loc>
+    <loc>http://localhost:1313/page/fa/posts/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://prkyo.github.io/page/posts/"
+                href="http://localhost:1313/page/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://prkyo.github.io/page/fr/posts/"
+                href="http://localhost:1313/page/fr/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://prkyo.github.io/page/fa/posts/"
+                href="http://localhost:1313/page/fa/posts/"
                 />
   </url>
 </urlset>
