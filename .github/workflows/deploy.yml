@@ -1,0 +1,55 @@
+# .github/workflows/deploy.yml
+name: Deploy Hugo Site from io folder to GitHub Pages (gh-pages branch)
+
+# 当 main 分支有新的 push 时触发此工作流
+on:
+  push:
+    branches:
+      - main # 📢 您的 Hugo 源文件所在的分支，通常是 main
+
+# 定义一个名为 "deploy" 的作业
+jobs:
+  deploy:
+    # 作业运行在 Ubuntu 最新版本上
+    runs-on: ubuntu-latest
+
+    # 权限配置：允许 GITHUB_TOKEN 有写入内容和 pages 的权限
+    # 这对于 peaceiris/actions-gh-pages 部署到 gh-pages 分支是必需的
+    permissions:
+      contents: write # 允许写入到 gh-pages 分支
+      pages: write    # 允许管理 GitHub Pages
+      id-token: write # 针对 OIDC，现代 GitHub Pages 部署通常需要
+
+    # 作业步骤
+    steps:
+      # 步骤 1: 检出仓库代码
+      - name: Checkout code
+        uses: actions/checkout@v4 # 使用 actions/checkout@v4 检出代码
+        with:
+          submodules: true # 📢 如果您的 Hugo 主题是 Git 子模块，请务必保留此行，否则可以删除
+          fetch-depth: 0   # 获取完整的 Git 历史，以便 Hugo 能够访问所有 Git 信息（如 commit 日期）
+
+      # 步骤 2: 设置 Hugo 环境
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3 # 使用 peaceiris/actions-hugo@v3 来设置 Hugo
+        with:
+          hugo-version: 'latest' # 使用最新版本的 Hugo，您也可以指定版本，例如 '0.120.4'
+          extended: true         # 📢 如果您使用了 Hugo Extended 版本特性（如 Sass/SCSS），请务必保留此行，否则可以删除
+
+      # 步骤 3: 构建 Hugo 站点
+      - name: Build Hugo site
+        run: | # 使用多行命令
+          cd io                   # 📢 关键：进入您的 Hugo 项目根目录 (io 文件夹)
+          hugo --minify           # 运行 Hugo 构建命令，--minify 会压缩 HTML/CSS/JS
+        # Hugo 将根据 `io/config.toml` 中的 `publishDir = "public"`
+        # 在 `io/` 目录下生成一个 `public` 文件夹
+        # 因此，相对于仓库根目录，生成的静态文件在 `./io/public`
+
+      # 步骤 4: 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3 # 使用 peaceiris/actions-gh-pages@v3 部署到 gh-pages 分支
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub 提供的 token，用于认证
+          publish_dir: ./io/public                   # *** 关键：指定生成的静态文件目录，相对于仓库根目录 ***
+          publish_branch: gh-pages                   # 目标部署分支，这里就是 gh-pages
+          # cname: your-custom-domain.com            # 📢 如果您使用自定义域名，请取消注释并将其替换为您的域名 (例如 myblog.com)
